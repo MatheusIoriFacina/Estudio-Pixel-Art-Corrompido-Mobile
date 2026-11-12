@@ -30,6 +30,7 @@ func _criar_botao(nome: String, acao: String, texto: String) -> void:
 	var botao := TouchScreenButton.new()
 	botao.name = nome
 	botao.action = acao
+	botao.scale = Vector2(1.25, 1.25)
 	botao.passby_press = acao.begins_with("mover_")
 	botao.texture_normal = _textura(Color(0.08, 0.10, 0.18, 0.7))
 	botao.texture_pressed = _textura(Color(0.2, 0.7, 0.8, 0.9))
@@ -66,12 +67,12 @@ func _textura(cor: Color) -> GradientTexture2D:
 func _posicionar() -> void:
 	var tela := get_viewport().get_visible_rect().size
 
-	botoes["cima"].position = Vector2(40, tela.y - 104)
-	botoes["baixo"].position = Vector2(40, tela.y - 40)
-	botoes["esquerda"].position = Vector2(8, tela.y - 72)
-	botoes["direita"].position = Vector2(72, tela.y - 72)
-	botoes["ataque"].position = Vector2(tela.x - 48, tela.y - 48)
-	botoes["reiniciar"].position = Vector2(tela.x - 48, tela.y - 96)
+	botoes["cima"].position = Vector2(52, tela.y - 136)
+	botoes["baixo"].position = Vector2(52, tela.y - 48)
+	botoes["esquerda"].position = Vector2(8, tela.y - 92)
+	botoes["direita"].position = Vector2(96, tela.y - 92)
+	botoes["ataque"].position = Vector2(tela.x - 56, tela.y - 56)
+	botoes["reiniciar"].position = Vector2(tela.x - 56, tela.y - 108)
 
 
 func _reiniciar() -> void:
