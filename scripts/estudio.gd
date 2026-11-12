@@ -86,7 +86,7 @@ func _encerrar(motivo: String) -> void:
 	jogador.encerrar()
 	get_tree().call_group("inimigos", "encerrar")
 
-	mensagem.text = motivo + "\nPressione R para reiniciar."
+	mensagem.text = motivo + "\nPressione R ou REIN para reiniciar."
 
 
 func _unhandled_input(event: InputEvent) -> void:
